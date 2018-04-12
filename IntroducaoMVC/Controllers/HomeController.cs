@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using IntroducaoMVC.Models;
 
 namespace IntroducaoMVC.Controllers {
     public class HomeController : Controller {
         public ActionResult Index() {
-            return View();
+            Pessoa pessoa = new Pessoa(1,"Rodrigo Pituba de Souza","Administrador");
+            return View(pessoa);
         }
         
 
@@ -23,6 +21,12 @@ namespace IntroducaoMVC.Controllers {
             return View();
         }
 
-        
+        [HttpPost]
+        public ActionResult Lista(int id,string nome, string tipo) {
+            ViewData["id"] = id;
+            ViewData["nome"] = nome;
+            ViewData["tipo"] = tipo;
+            return View();
+        }
     }
 }
