@@ -23,10 +23,8 @@ namespace IntroducaoMVC.Controllers {
 
         [HttpPost]
         public ActionResult Lista(Pessoa pessoa) {
-            ViewData["id"] = pessoa.id;
-            ViewData["nome"] = pessoa.nome;
-            ViewData["tipo"] = pessoa.tipo;
-            return View();
+            
+            return View(pessoa);
         }
     }
 }

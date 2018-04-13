@@ -1,4 +1,4 @@
-﻿
+﻿@model IntroducaoMVC.Models.Pessoa
 @{
     ViewBag.Title = "Lista";
 }
@@ -9,20 +9,23 @@
     <b> Id da Pessoa </b>
 </div>
 <div>
-    @ViewData["id"]
+    @Model.id
 </div>
 
 <div>
     <b> Nome da pessoa </b>
 </div>
 <div>
-    @ViewData["nome"]
+    @Model.nome
 </div>
 
 <div>
     <b> Tipo </b>
 </div>
 <div>
-    @ViewData["tipo"]
+    @Model.tipo
 </div>
 
+<br />
+
+@Html.ActionLink("Voltar","Index","Home")
