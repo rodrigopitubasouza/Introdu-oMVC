@@ -10,5 +10,9 @@
             this.nome = nome;
             this.tipo = tipo;
         }
+
+        public Pessoa() {
+
+        }
     }
 }
